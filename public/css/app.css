@@ -1,0 +1,132 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: salmon;
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+    grid-template-rows: 80px 100vh 100vh auto;
+    grid-template-areas: 
+    ". navbar ."
+    ". landing ."
+    ". about ."
+    ". footer .";
+}
+
+.navbar {
+    grid-area: navbar;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "logo . nav-links"
+}
+
+.logo {
+    grid-area: logo;
+    align-self: end;
+    height: 100px;
+    display: grid;
+}
+
+.logo a {
+    align-self:end;
+    text-decoration: none;
+
+}
+
+.logo-img {
+    height: 80px;
+}
+
+.nav-links {
+    grid-area: nav-links;
+    align-self: end;
+    display: flex;
+    justify-content: flex-end;
+    text-transform: uppercase;
+    list-style-type: none;
+}
+
+.nav-links li {
+    padding: 10px;
+}
+
+.landing {
+    grid-area: landing;
+    height: calc(100vh - 200px);
+    place-self: center;
+    display: grid;
+}
+.intro-text {
+    place-self: center;
+}
+
+.intro-text h1 {
+    margin-bottom: 10px;
+    font-weight: 100;
+    font-size: 2.5em;
+}
+
+.intro-text h3 {
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+}
+
+.intro-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.intro-link a {
+    display: flex;
+    padding: 25px;
+    text-decoration: none;
+}
+
+.about{
+    grid-area: about;
+    height: 100vh;
+    background-color: bisque;
+    display: grid;
+    grid-template-columns: 1fr 100px 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "about-thad . ."
+    ". . about-skills";
+
+}
+
+.about-thad{
+    grid-area: about-thad;
+    font-weight: 100;
+    display: grid;
+    place-content: center;
+}
+
+.about-thad h1, h4 {
+    padding: 10px;
+    place-self: center;
+    text-align: center;
+}
+
+.about-skills {
+    grid-area: about-skills;
+    font-weight: 100;
+    display: grid;
+    place-content: center;
+}
+
+.about-skills h1, h4 {
+    padding: 10px;
+    place-self: center;
+    text-align: center;
+    
+}
+
+.footer {
+    grid-area: footer;
+    height: 100px;
+}
