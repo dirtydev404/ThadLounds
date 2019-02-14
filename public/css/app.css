@@ -7,7 +7,7 @@ body {
     background-color: salmon;
     display: grid;
     grid-template-columns: 100px 1fr 100px;
-    grid-template-rows: 80px 100vh 100vh auto;
+    grid-template-rows: 80px 100vh 200vh auto;
     grid-template-areas: 
     ". navbar ."
     ". landing ."
@@ -88,7 +88,7 @@ body {
 
 .about{
     grid-area: about;
-    height: 100vh;
+    height: 200vh;
     background-color: bisque;
     display: grid;
     grid-template-columns: 1fr 100px 1fr;
@@ -103,13 +103,16 @@ body {
     grid-area: about-thad;
     font-weight: 100;
     display: grid;
-    place-content: center;
+    justify-content: center;
+    align-content: flex-start;
+    padding-top: 40px;
 }
 
 .about-thad h1, h4 {
     padding: 10px;
     place-self: center;
     text-align: center;
+    height: 5;
 }
 
 .about-skills {
